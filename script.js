@@ -11,8 +11,6 @@ function slideOut()
     console.log(allDivs[currDiv]);
     allDivs[currDiv].classList.remove('slideInFromLeft');
     allDivs[currDiv].classList.add('slideOut');
-    allDivs[currDiv].classList.remove('shown');
-    allDivs[currDiv].classList.add('hidden');
     console.log(allDivs[currDiv]);
     currDiv = (currDiv+1);
     console.log(allDivs[currDiv]);

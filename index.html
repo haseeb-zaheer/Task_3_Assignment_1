@@ -4,6 +4,7 @@
         <meta charset = "UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Job Application </title>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
         <link rel = "stylesheet" href = "style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +14,8 @@
     <body>
 
     <form onsubmit="return validate()">
-        <div class = "firstDiv slideInFromLeft hidden">
-            
+        <div class = " firstDiv slideInFromLeft shown">
+            <br>
             <legend> Personal Information </legend>
             <label for = "firstName">First Name</label><br>
             <input type = "text" id = "firstName" name="firstName" required>
@@ -43,10 +44,71 @@
             <button type="button" onclick="formSubmit()"> Submit </button>  
         </div>
     
-        <div class = "secondDiv slideInFromLeft shown">
+        <div class = "secondDiv slideInFromLeft hidden">
+            <br>
             <legend> Resume and CV </legend>
-            <label for = "resume"> Resume </label>
-            <input type = "file" id = "resume" name = "Resume" required>
+            <br>
+            <label for = "resume"> Resume </label> <br>
+            <input type = "file" id = "resume" name = "Resume" required><br><br><br>
+            <label for="cv">Cover Letter</label><br>
+            <textarea id="cv" name="Cv" rows="25" cols="45" required></textarea><br>
+            
+            <button type="button" onclick="formSubmit()"> Submit </button>  
+        </div>
+
+        <div class = "thirdDiv slideInFromLeft hidden">
+            <br>
+            <legend> Education </legend>
+            <br>
+            <label for = "HLE"> Highest Level of Education </label> <br>
+            <input type = "text" id = "HLE" name = "HLE" required>
+            <br><br>
+            <label for="school">Name of School/University</label><br>
+            <input type = "text" id = "school" name = "School" required>
+            <br><br>
+            <label for = "areaOfStudy"> Major/Area of Study </label><br>
+            <input type = "text" id = "areaOfStudy" name = "areaOfStudy" required>
+            <br><br>
+            <label for = "gradYear"> Major/Area of Study </label><br>
+            <input type = "number" id = "gradYear" name = "gradYear" required>
+            <br><br>
+            <label for = "employmentHistory"> Employment History </label><br>
+            <input type = "text" id = "employmentHistory" name = "employmentHistory" required>
+            <br>
+            <button type="button" onclick="formSubmit()"> Submit </button>  
+        </div>
+
+        <div class = "fourthDiv slideInFromLeft hidden">
+            <br>
+            <legend> Previous Job Titles </legend>
+            <br>
+            <label for = "companyName"> Company Names </label> <br>
+            <input type = "text" id = "firstCompanyName" name = "firstCompanyName" placeholder="Required"><br>
+            <input type = "text" id = "secondCompanyName" name = "secondCompanyName"><br>
+            <input type = "text" id = "thirdCompanyName" name = "thirdCompanyName" >
+            <br><br>
+            <label for="empDates">Employment Dates</label><br>
+            <p>1st Company</p>
+            From: <input type = "date" id = "fromFirstDate" name = "fromFirstDate" required><br>
+            Till: <input type = "date" id = "tillFirstDate" name = "tillFirstDate" required>
+            <p>2nd Company</p>
+            From: <input type = "date" id = "fromSecondDate" name = "fromSecondDate" ><br>
+            Till: <input type = "date" id = "tillSecondDate" name = "tillSecondDate" >
+            <p>3rd Company</p>
+            From: <input type = "date" id = "fromThirdDate" name = "fromThirdDate" ><br>
+            Till: <input type = "date" id = "tillThirdDate" name = "tillThirdDate" >
+            <br><br>
+            <label for = "jobResponsibilites"> Job Responsibilites </label><br>
+            <textarea id="jobResponsibilites" name="jobResponsibilites" rows="15" cols="30" required></textarea><br>
+            <br><br>
+            <button type="button" onclick="formSubmit()"> Submit </button>  
+        </div>
+
+        <div class = "fifthDiv slideInFromLeft hidden">
+            <br>
+            <legend>Skills</legend>
+            <br>
+            <label for = ""></label>
         </div>
 
     </form>

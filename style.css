@@ -1,5 +1,6 @@
 body
 {
+    background-color: black;
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
     font-weight:500;
@@ -61,6 +62,7 @@ input:focus
         transform: translate(100%,-50%);
         opacity: 0;
     }
+
 }
 
 .slideOut
@@ -71,8 +73,8 @@ input:focus
     animation-timing-function: ease;
 }
 
-.firstDiv
-{
+.firstDiv, .thirdDiv, .fifthDiv
+{   
     height:45vh;
     width:20vw;
     border-radius: 10%;
@@ -83,12 +85,19 @@ input:focus
     right:50%;
     position: absolute;
     background-color: rgb(17, 17, 17);
+    transition: scale 0.5s ease, box-shadow 0.5s ease;
+}
+
+.firstDiv:hover, .secondDiv:hover, .thirdDiv:hover, .fourthDiv:hover, .fifthDiv:hover
+{
+    box-shadow: 0 0 50px rgba(36, 3, 224, 0.7);
+    scale:102%;
 }
 
 .secondDiv
 {
-    height:45vh;
-    width:20vw;
+    height: 65vh;
+    width:30vw;
     border-radius: 10%;
     justify-content: center;
     align-items: center;
@@ -97,4 +106,20 @@ input:focus
     right:50%;
     position: absolute;
     background-color: rgb(17, 17, 17);
+    transition: scale 0.5s ease, box-shadow 0.5s ease;
+}
+
+.fourthDiv
+{
+    height:90vh;
+    width:30vw;
+    border-radius: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top:50%;
+    right:50%;
+    position: absolute;
+    background-color: rgb(17, 17, 17);
+    transition: scale 0.5s ease, box-shadow 0.5s ease;
 }
