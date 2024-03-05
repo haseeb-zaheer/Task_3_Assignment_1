@@ -61,7 +61,6 @@ input:focus
         transform: translate(100%,-50%);
         opacity: 0;
     }
-
 }
 
 .slideOut
