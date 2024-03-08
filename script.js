@@ -1,4 +1,4 @@
-let currDiv = 8;
+let currDiv = 0;
 const allDivs = document.querySelectorAll('div');
 
 function validate()
