@@ -12,107 +12,178 @@
     </head>
 
     <body>
-
-    <form onsubmit="return validate()">
-        <div class = " firstDiv slideInFromLeft shown">
-            <br>
-            <legend> Personal Information </legend>
+    <form onsubmit="return validate()" action = "/next.html">
+        <div class = " firstDiv slideInFromLeft hidden">
+            <h2> Personal Information </h2>
             <label for = "firstName">First Name</label><br>
-            <input type = "text" id = "firstName" name="firstName" required>
+            <input type = "text" id = "firstName" name="firstName" placeholder="First Name">
             <br>
             <label for = "lastName">Last Name</label><br>
-            <input type = "text" id = "lastName" name="lastName" required>
+            <input type = "text" id = "lastName" name="lastName"placeholder="Last Name">
             <br>
             <label for = "phone"> Phone Number</label><br>
-            <input type = "text" id = "phone" name = "phoneNumber" required>
+            <input type = "tel" id = "phone" name = "phoneNumber" placeholder="11-digit Phone Number">
             <br>
             <label for = "email"> Email </label><br>
-            <input type = "email" id = "email" name = "email" required>
+            <input type = "email" id = "email" name = "email"placeholder="e.g name@gmail.com">
             <br>
             <label for = "street"> Street Number </label><br>
-            <input type = "text" id = "street" name = "streetNum" required>
+            <input type = "text" id = "street" name = "streetNum" placeholder="House, and street number with Block">
             <br>
             <label for = "city"> City </label><br>
-            <input type = "text" id = "city" name = "City" required>
+            <input type = "text" id = "city" name = "City" placeholder="City">
             <br>
             <label for = "state"> State </label><br>
-            <input type = "text" id = "state" name = "State" required>
+            <input type = "text" id = "state" name = "State" placeholder="State">
             <br>
             <label for = "zip"> ZIP Code </label><br>
-            <input type = "number" id = "zip" name = "ZIPCode" required>
+            <input type = "number" id = "zip" name = "ZIPCode" placeholder="ZIP Code (e.g 55890)">
             <br>
-            <button type="button" onclick="formSubmit()"> Submit </button>  
+            <button type="button" onclick="validate()"> Submit </button><br>
+            <p id = "error1"></p>
         </div>
     
         <div class = "secondDiv slideInFromLeft hidden">
-            <br>
-            <legend> Resume and CV </legend>
+            <h2> Resume and CV </h2>
             <br>
             <label for = "resume"> Resume </label> <br>
-            <input type = "file" id = "resume" name = "Resume" required><br><br><br>
+            <input type = "file" id = "resume" name = "Resume"><br><br><br>
             <label for="cv">Cover Letter</label><br>
-            <textarea id="cv" name="Cv" rows="25" cols="45" required></textarea><br>
-            
-            <button type="button" onclick="formSubmit()"> Submit </button>  
+            <textarea id="cv" name="Cv" rows="25" cols="45" placeholder="Write Cover Letter here"></textarea><br>
+            <button type="button" onclick="validate()"> Submit </button>  
+            <p id = "error2"></p>
         </div>
 
         <div class = "thirdDiv slideInFromLeft hidden">
             <br>
-            <legend> Education </legend>
+            <h2> Education </h2>
             <br>
             <label for = "HLE"> Highest Level of Education </label> <br>
-            <input type = "text" id = "HLE" name = "HLE" required>
+            <input type = "text" id = "HLE" name = "HLE">
             <br><br>
             <label for="school">Name of School/University</label><br>
-            <input type = "text" id = "school" name = "School" required>
+            <input type = "text" id = "school" name = "School">
             <br><br>
             <label for = "areaOfStudy"> Major/Area of Study </label><br>
-            <input type = "text" id = "areaOfStudy" name = "areaOfStudy" required>
+            <input type = "text" id = "areaOfStudy" name = "areaOfStudy">
             <br><br>
-            <label for = "gradYear"> Major/Area of Study </label><br>
-            <input type = "number" id = "gradYear" name = "gradYear" required>
+            <label for = "gradYear"> Graduation Year </label><br>
+            <input type = "number" id = "gradYear" name = "gradYear">
             <br><br>
             <label for = "employmentHistory"> Employment History </label><br>
-            <input type = "text" id = "employmentHistory" name = "employmentHistory" required>
+            <input type = "text" id = "employmentHistory" name = "employmentHistory">
             <br>
-            <button type="button" onclick="formSubmit()"> Submit </button>  
+            <button type="button" onclick="validate()"> Submit </button>  
+            <p id = "error3"></p>
         </div>
 
         <div class = "fourthDiv slideInFromLeft hidden">
             <br>
-            <legend> Previous Job Titles </legend>
-            <br>
+            <h2> Previous Job Titles </h2>
             <label for = "companyName"> Company Names </label> <br>
             <input type = "text" id = "firstCompanyName" name = "firstCompanyName" placeholder="Required"><br>
             <input type = "text" id = "secondCompanyName" name = "secondCompanyName"><br>
             <input type = "text" id = "thirdCompanyName" name = "thirdCompanyName" >
-            <br><br>
             <label for="empDates">Employment Dates</label><br>
-            <p>1st Company</p>
-            From: <input type = "date" id = "fromFirstDate" name = "fromFirstDate" required><br>
-            Till: <input type = "date" id = "tillFirstDate" name = "tillFirstDate" required>
-            <p>2nd Company</p>
+            <h4>1st Company</h4>
+            From: <input type = "date" id = "fromFirstDate" name = "fromFirstDate"><br>
+            Till: <input type = "date" id = "tillFirstDate" name = "tillFirstDate">
+            <h4>2nd Company</h4>
             From: <input type = "date" id = "fromSecondDate" name = "fromSecondDate" ><br>
             Till: <input type = "date" id = "tillSecondDate" name = "tillSecondDate" >
-            <p>3rd Company</p>
+            <h4>3rd Company</h4>
             From: <input type = "date" id = "fromThirdDate" name = "fromThirdDate" ><br>
             Till: <input type = "date" id = "tillThirdDate" name = "tillThirdDate" >
             <br><br>
-            <label for = "jobResponsibilites"> Job Responsibilites </label><br>
-            <textarea id="jobResponsibilites" name="jobResponsibilites" rows="15" cols="30" required></textarea><br>
+            <label for="jobResponsibilities">Job Responsibilities</label><br>
+            <textarea id="jobResponsibilities" name="jobResponsibilities" rows="10" cols="30"></textarea><br>
             <br><br>
-            <button type="button" onclick="formSubmit()"> Submit </button>  
+            <button type="button" onclick="validate()"> Submit </button>  
+            <p id = "error4"></p>
         </div>
 
         <div class = "fifthDiv slideInFromLeft hidden">
-            <br>
-            <legend>Skills</legend>
-            <br>
-            <label for = ""></label>
+            <h2>Skills</h2>
+            <label for = "certifications"> Certifications</label><br>
+            <input type = "file" id = "certifications" name = "Certifications"><br><br>
+            <label for = "programmingLanguages"> Programming Languages </label><br><br>
+            <select id = "programmingLanguages" name = "programmingLanguages">
+                <option value = "C++">C++</option>
+                <option value = "C">C</option>
+                <option value = "C#">C#</option>
+                <option value = "html">HTML</option>
+                <option value = "CSS">CSS<option>
+                <option value = "JS">JavaScript</option>
+                <option value = "MERN">MERN</option>
+                <option value = "Ruby">Ruby</option>
+            </select>
+            <br><br>
+            <button type = "button" onclick="validate()">Submit</button>
+            <p id = "error5"></p>
         </div>
 
+        <div class = "sixthDiv slideInFromLeft hidden">
+            <h2> Availability </h2>
+            <label for = "startDate"> Start Date </label><br>
+            <input type = "date" id = "startDate" name = "startDate"><br><br>
+            <br>
+            <label for = "prefWorkSchedule"> Preferred Work Schedule </label><br>
+            <input type = "text" id = "prefWorkSchedule" name = "prefWorkSchedule"><br><br><br>
+            <label for = "relocate"> Willingness to Relocate </label><br>
+            <input type = "radio" id = "yesRelocate" value = "yesRelocate" name = "relocate">Yes
+            <input type = "radio" id = "noRelocate" value = "noRelocate" name = "relocate">No<br><br>
+
+            <button type = "button" onclick="validate()">Submit</button>
+            <p id = "error6"></p>
+        </div>
+
+        <div class = "seventhDiv slideInFromLeft hidden">
+            <h2> References </h2>
+            <br><br>
+            <label for = "refName"> Reference Name </label><br>
+            <input type = "text" id = "refName" name = "refName"><br><br>
+            <br>
+            <label for = "refContactNum"> Reference Contact Number </label><br>
+            <input type="tel" id = "refContactNum" name = "refContactNum"><br><br><br>
+            <label for = "relationship"> Relationship to Applicant </label><br>
+            <input type = "text" id = "relationship" name = "relocate">
+            <br><br>
+
+            <button type = "button" onclick="validate()">Submit</button>
+            <p id = "error7"></p>
+        </div>
+
+        <div class = "eigthDiv slideInFromLeft hidden">
+            <br><br>
+            <h2>Additional Questions</h2>
+            <br><br>
+            <label for = "Questions"> Questions </label><br>
+            <textarea id = "Questions" name = "Questions" rows = 15, cols = 25></textarea>
+            <br><br>
+            <button type = "button" onclick="validate()">Submit</button>
+            <p id = "error8"></p>
+        </div>
+
+        <div class = "ninthDiv slideInFromLeft shown">
+            <h2> Consent and Agreement</h2>
+            <br><br>
+            <label for = "termsAndConditions"> Agree to Terms and Conditions </label>
+            <input type = "checkbox" id = "termsAndConditions" name = "termsAndConditions">
+            <br><br>
+            <label for = "privacyPolicy"> Acknowledge Privacy Policies </label>
+            <input type = "checkbox" id = "privacyPolicy" name = "privacyPolicy">
+            <br><br>
+            <button type = "button" onclick="validate()">Submit</button>
+            <p id = "error9"></p>
+        </div>
+        
+        <div class = "lastDiv slideInFromLeft hidden">
+            <p>Are you sure you would like to submit? </p>
+            <button type= "submit" onclick="validate()"> Submit </button>
+        </div>
     </form>
-        <script src="script.js"></script>
+
+    <script src="script.js"></script>
     </body>
 
 </html>
